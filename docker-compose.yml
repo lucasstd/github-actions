@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  github-actions-teste:
+    image: github-actions-teste
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8050:8050
