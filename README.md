@@ -2,10 +2,11 @@
 
 ![licence mit](https://img.shields.io/github/license/lucasstd/githubactions?color=bright-green&style=for-the-badge)
 
-Description
---
+## Description
 Simple project to show how GithubActions works for a techtalk
 
-Installation
---
+## History
+See [Releases](https://github.com/lucasstd/githubactions/releases) for detailed changelog.
+
+## Installation
 ```yarn && yarn start```
