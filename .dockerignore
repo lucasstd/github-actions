@@ -2,6 +2,7 @@
 **/.dockerignore
 **/.env
 **/.git
+**/.husky
 **/.gitignore
 **/.project
 **/.settings
