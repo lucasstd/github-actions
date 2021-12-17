@@ -17,8 +17,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./",
-    "lint:fix": "yarn lint --fix" ,
-    "prepare": "husky install"
+    "lint:fix": "yarn lint --fix",
+    "commit-lint": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn lint:fix"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +50,7 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.27.1",
     "eslint-plugin-react-hooks": "4.3.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2"
   }
 }
