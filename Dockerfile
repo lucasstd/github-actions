@@ -1,16 +1,18 @@
-FROM node:lts-alpine
+FROM node:alpine
 
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY ["package.json", "package-lock.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
-COPY . .
+COPY package*.json ./
+RUN yarn
+# --production --silent
+# && mv node_modules ../
+COPY . /app
 
-EXPOSE 8050
+EXPOSE 3000
 
-RUN chown -R node /usr/src/app
-USER node
+# RUN chown -R node /app
+# USER node
 
-CMD ["node", "index.js"]
+CMD ["yarn", "start"]
