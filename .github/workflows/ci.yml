@@ -20,11 +20,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install NPM packages
-        run: npm ci
+      - name: Install yarn packages (npm ci like)
+        run: yarn install --frozen-lockfile
 
       - name: Build project
-        run: npm run build
+        run: yarn build
 
       - name: Run tests
-        run: npm run test
+        run: yarn test
