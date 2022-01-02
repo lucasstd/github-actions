@@ -1,12 +1,13 @@
 version: '3.7'
 
 services:
-  github-actions-teste:
-    image: github-actions-teste
+  crypto-prices:
+    image: crypto-prices
     build:
       context: .
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: development
+      FETCH_CRYPTO_DATA_URL: https://api.alternative.me/v2/ticker/
     ports:
       - 8050:3000
