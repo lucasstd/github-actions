@@ -2,13 +2,13 @@ FROM node:17-alpine
 
 ENV NODE_ENV=development
 
-WORKDIR /app
+WORKDIR /var/app/
 
 COPY package*.json ./
 RUN yarn
 # --production --silent
 # && mv node_modules ../
-COPY . /app
+COPY . /var/app/
 
 EXPOSE 3000
 
